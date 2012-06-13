@@ -1,0 +1,48 @@
+*{
+	padding:0;
+	margin:0;
+}
+.container {
+	width:200px;
+	height:300px;
+	background-color:#6D4F22;
+	outline:2px dotted red;
+	position:relative;
+	top: 40px;
+	left: 500px;
+}
+.veiw{
+	width:190px;
+	height:inherit;
+	float:left;
+	position:absolute;
+}
+.content{
+	width:190px;
+	position:absolute;
+	top:0;
+}
+.scroll{
+	margin-left:190px;
+	height:150px;	
+	background-color:#777;
+	position:absolute;
+	right:10px;
+}
+.path{
+	width:15px;
+	height:inherit;
+	margin:0 auto;
+	position:relative;
+	outline:1px solid red;
+	background-color:#798CC9;
+}
+.pointer{
+	width:15px;
+	height:50px;
+	background-color:#000;
+	position:absolute;
+	top:0px;
+	border-radius:10px;
+	cursor:pointer;
+}
