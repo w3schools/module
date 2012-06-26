@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html><head>
+	<title>HashState Test</title>
+	<script type="text/javascript" charset="utf-8">
+		HashState = {
+			callbacks : {},
+			on : function(state,callback){
+				this.callbacks[state] = callback;
+			},
+			checkForChange : function(){
+				var state = location.hash.substr(1);
+				if (state != this.lastState){
+					this.callbacks[state] && this.callbacks[state]( state, this.lastState );
+					this.lastState = state;
+				}
+			},
+			watchForChanges : function(retestDelay){
+				var h=this; setInterval(function(){h.checkForChange();},retestDelay||100);
+			}
+		};
+	</script>
+	<script type="text/javascript" charset="utf-8">
+		var pageChange = function(state,oldState){
+			if (window.console) console.log('Switching to state '+state+' from '+oldState);
+			document.getElementById(state+'-content').style.display = 'block';
+			if (oldState) document.getElementById(oldState+'-content').style.display = 'none';
+		}
+		HashState.on('page1',pageChange);
+		HashState.on('page2',pageChange);
+		HashState.watchForChanges();
+	</script>
+	<style type="text/css" media="screen">
+		.page-content { display:none }
+	</style>
+</head><body>
+	<ul>
+		<li><a href="#page1">Page 1</a></li>
+		<li><a href="#page2">Page 2</a></li>
+	</ul>
+	<div class="page-content" id="page1-content">
+		PAGE 1
+	</div>
+	<div class="page-content" id="page2-content">
+		PAGE 2
+	</div>
+</body>
+</html>
