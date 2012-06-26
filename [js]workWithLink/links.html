@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript"></script>
+</head>
+<body>
+<form>
+<input type="button" value="Reload Page" onClick="window.location.href=window.location.href">
+<input type="button" value="Reload Page" onClick="history.go(0)">
+<input type="button" value="Reload Page" onClick="window.location.reload()">
+</form>
+<br />
+<a id="google">Google.com</a>
+<ul>
+<script type="text/javascript">
+	document.getElementById("google").setAttribute("href","http://www.google.com");
+	for (var i=1;i<=10;i++)
+		document.write("<li><a href='#link'>link" + i +"</a></li>");
+	var index = document.getElementsByTagName("a");
+	index.item(4).innerHTML ="Hello";
+	document.links.item(1).innerHTML = "it's ok ";
+	//alert (document.links.length);
+	document.linkColor='green';
+	//alert(document.links[0].href);
+	document.open();
+	document.write("hello World !");
+	//alert (window.location.href);//link mojod dar  url browser ra neshan midahad !
+	//window.location.href='http://www.yahoo.com';
+</script>
+</ul>
+</body>
+</html>
