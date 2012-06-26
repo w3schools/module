@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body>
+<form>
+	<select id="rl">
+		<option value="http://www.google.com">Google</option>
+		<option value="http://www.yahoo.com">Yahoo</option>
+	</select>
+	<input type="button" value="go" id="goo"/>
+</form>
+<script type="text/javascript">
+	var rl = document.getElementById("rl");
+	var goo = document.getElementById("goo");
+	goo.onclick = function (){
+		window.location = rl.options[rl.selectedIndex].value;	
+	}
+</script>
+</body>
+</html>
