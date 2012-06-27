@@ -1,0 +1,82 @@
+<html>
+<head>
+<style type="text/css">
+*{
+	padding:0;
+	margin:0;	
+}
+div.view{
+	margin:100px auto;
+	position:relative;
+	width:300px;
+	height:300px;
+}
+div.TriangleTop,
+div.TriangleLeft,
+div.TriangleRight,
+div.TriangleBottom{
+	position:absolute;
+	top:0;
+	left:0;
+}
+div.TriangleTop{
+	margin-left:50px;
+	border:100px solid red;
+	border-bottom-color:transparent;
+	border-left-color:transparent;
+	border-right-color:transparent;
+}
+div.TriangleLeft{
+	border:100px solid red;
+	border-bottom-color:transparent;
+	border-top-color:transparent;
+	border-right-color:transparent;
+	top:44px;
+}
+div.TriangleRight{
+	margin-left:200px;
+	border:100px solid red;
+	border-top-color:transparent;
+	border-bottom-color:transparent;
+	border-left-color:transparent;
+	top:44px;
+	left:-100px;
+}
+div.circle{
+	margin-left:100px;
+	background-color:red;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100px;
+	height:100px;
+	border-radius:50px;
+	top:97px;
+}
+div.TriangleBottom{
+	margin-left:50px;
+	border:100px solid red;
+	border-top-color:transparent;
+	border-left-color:transparent;
+	border-right-color:transparent;
+	top:95px;
+}
+p{
+	background-color:#FFF;
+	color:green;
+	text-shadow:0 0 8px black;
+	text-decoration:none;
+}
+</style>
+</head>
+<body>
+<div class="view">
+		<div class="TriangleTop"></div>
+		<div class="TriangleLeft"></div>
+		<div class="TriangleRight"></div>
+		<div class="circle"></div>
+		<div class="TriangleBottom"></div>
+	</div>
+<p style="text-align:center;">In Ham Ye Ashenayi Ba Ashkale CSS !</p>
+</body>
+</html>
