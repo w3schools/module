@@ -1,0 +1,7 @@
+1- next & back button for slide
+
+2- box-reflect for silde pics
+
+3- circular
+
+4- tooltip
