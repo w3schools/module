@@ -1,0 +1,14 @@
+<html>
+<head>
+<script type="text/javascript">
+function Show(IDS,flag) {
+  document.getElementById(IDS).style.display = flag;
+}
+</script>
+</head>
+<body>
+<button onClick="Show('divTag','block')">+</button>
+<button onClick="Show('divTag','none')">-</button>
+<div id="divTag" style="display:none"> pressed </div>
+</body>
+</html>
