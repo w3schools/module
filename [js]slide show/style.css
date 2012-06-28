@@ -50,3 +50,43 @@ div.back:hover{
 	background:rgba(0,0,0,0.4) url(images/back.png) no-repeat center;
 	-webkit-transition:background 1s ease-in;
 }
+.box1{
+	width:80px;
+	height:170px;
+	position:absolute;
+	top: 155px;
+	left: 38px;
+	outline:1px solid red;
+}
+.box2{
+	width:115px;
+	height:200px;
+	position:absolute;
+	top: 140px;
+	left: 110px;
+	outline:1px solid red;
+}
+.box3{
+	width:170px;
+	height:280px;
+	position:absolute;
+	top:100px;
+	left:235px;
+	outline:1px solid red;
+}
+.box4{
+	width:115px;
+	height:200px;
+	position:absolute;
+	top: 140px;
+	right: 110px;
+	outline:1px solid red;
+}
+.box5{
+	width:80px;
+	height:170px;
+	position:absolute;
+	top: 155px;
+	right: 38px;
+	outline:1px solid red;
+}
