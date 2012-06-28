@@ -5,60 +5,59 @@
 <link href="style.css" rel="stylesheet" type="text/css"  />
 <title>slide show !</title>
 <style type="text/css">
-*{
-	padding:0;
-	margin:0;	
+.box1{
+	width:80px;
+	height:170px;
+	position:absolute;
+	top: 155px;
+	left: 38px;
+	outline:1px solid red;
 }
-body{
-	width:100%;
-	height:100%;
-	background-image:url(images/bg.jpg);	
+.box2{
+	width:115px;
+	height:200px;
+	position:absolute;
+	top: 140px;
+	left: 110px;
+	outline:1px solid red;
 }
-div[class^=container]{
-	width:720px;
-	height:420px;
-	margin:150px auto;
+.box3{
+	width:170px;
+	height:280px;
+	position:absolute;
+	top:100px;
+	left:235px;
+	outline:1px solid red;
 }
-div.next{
-	float:left;
-	width:40px;
-	height:inherit;
-	background:url(images/next.png) no-repeat center;
-	-webkit-transition:background 1s;
-	border-top-left-radius: 25px 100px;
-	border-bottom-left-radius: 25px 100px;
+.box4{
+	width:115px;
+	height:200px;
+	position:absolute;
+	top: 140px;
+	right: 110px;
+	outline:1px solid red;
+}
+.box5{
+	width:80px;
+	height:170px;
+	position:absolute;
+	top: 155px;
+	right: 38px;
+	outline:1px solid red;
+}
 
-}
-div.next:hover{
-	background:rgba(0,0,0,0.4) url(images/next.png) no-repeat center;
-	-webkit-transition:background 1s;
-}
-div.banner{
-	float:left;
-	width:640px;
-	height:inherit;
-	background:url(images/bg-banner.jpg) repeat-x;
-}
-
-div.back{
-	margin-left:680px;
-	height:inherit;
-	background:url(images/back.png) no-repeat center;
-	-webkit-transition:background  1s;
-	border-top-right-radius: 25px 100px;
-	border-bottom-right-radius: 25px 100px;
-
-}
-div.back:hover{
-	background:rgba(0,0,0,0.4) url(images/back.png) no-repeat center;
-	-webkit-transition:background 1s;
-}
 </style>
 </head>
 <body>
 	<div class="container-banner">
 		<div class="next"></div>
-		<div class="banner"></div>
+		<div class="banner">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+			<div class="box4"></div>
+			<div class="box5"></div>
+		</div>
 		<div class="back"></div>
 	</div>
 </body>
