@@ -57,6 +57,7 @@ div.back:hover{
 	top: 155px;
 	left: 38px;
 	outline:1px solid red;
+	background-color:#CC6600;
 }
 .box2{
 	width:115px;
@@ -65,6 +66,7 @@ div.back:hover{
 	top: 140px;
 	left: 110px;
 	outline:1px solid red;
+	background-color:#C06;
 }
 .box3{
 	width:170px;
@@ -73,6 +75,7 @@ div.back:hover{
 	top:100px;
 	left:235px;
 	outline:1px solid red;
+	background-color:#933;
 }
 .box4{
 	width:115px;
@@ -81,6 +84,8 @@ div.back:hover{
 	top: 140px;
 	right: 110px;
 	outline:1px solid red;
+	background-color:#F60;
+	z-index:1;
 }
 .box5{
 	width:80px;
@@ -89,4 +94,5 @@ div.back:hover{
 	top: 155px;
 	right: 38px;
 	outline:1px solid red;
+	background-color:#a06;
 }
