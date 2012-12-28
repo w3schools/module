@@ -3,32 +3,56 @@
   <title></title>
 </head>
 <body>
-<script type="text/javascript">
-var obj1 = {
-	method1: function () {
-		document.write('Salam 1<br />');
-		obj2.method2();
-		(new obj2.method2).testok();
-	}
-};
-var obj2 = {
-	method2: function () {
-		document.write('salam 2<br />');
-		this.testok = function () {
-			document.write('salam 3<br />');
-		}
-		var obj22 = {
-			method22: function () {
-				document.write('salam 4<br />');
-				var func2 = function () {
-					document.write('hello dear alimd :-*<br />');
-				}
-			}
-		}
-	}
-};
-obj1.method1();
+<div id="msgBox"></div>
 
+<script type="text/javascript">
+function e(data){
+  var box = document.getElementById('msgBox');
+  box.innerHTML += data + "<br />";
+}
+
+var obj1 = {
+  method1: function () {
+    e('Salam 1');
+    
+    obj = new obj2.method2();
+      // or
+      // obj = obj2.method2();
+      // with enabling 'return this;' at line 43
+    obj.testok();
+      // or
+      // new obj2.method2().testok();
+      // to run both, 'method2' object and 'testok' method.
+      
+    new obj.obj22.method22().func2();
+      // or
+      // obj.obj22.method22().func2();
+      // with enabling 'return this;' at line 35
+  }
+};
+
+var obj2 = {
+  method2: function () {
+    e('salam 2');
+    
+    this.testok = function () {
+      e('salam 3');
+    };
+      
+    this.obj22 = {
+        method22: function () {
+          e('salam 4');
+          this.func2 = function () {
+            e('hello dear alimd :-*');
+          };
+          //return this;
+        }
+    };
+    //return this;
+  }
+};
+
+obj1.method1();
 </script>
 </body>
 </html>
