@@ -1,0 +1,24 @@
+*{
+	padding:0;
+	margin:0;	
+}
+.menu *{
+	outline:1px solid red;
+}
+.menu ul{
+	min-height:inherit;
+}
+
+.menu li{
+	float:left;
+	min-height:inherit;
+	background-color:salmon;
+	margin-left:3px;
+}
+.menu li:hover{
+	background-color:#C96;	
+}
+.menu a{
+	padding:10px 65px;
+	display : block;
+}
