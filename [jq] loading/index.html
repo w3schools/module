@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="http://localhost/jq.js"></script>
+<script>
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("#wait").css("display", "block");
+			$.get('dummy.html', function(page) {
+				var m = page.match(/img /g);
+				if (m) {
+					var counter = 0;
+					$("#txt").html(page).find('img').load(function() {
+						counter++;
+						if (counter == m.length) {
+							$("#wait").css("display", "none");
+							$("#txt").css("display", "block");
+						}
+						/*else {
+							$("#txt").html(page);
+							$("#wait").css("display", "none");
+						}*/
+					});
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<div id="txt" style='display: none'></div>
+<img src="loader.gif" alt="" id="wait" style="display: none">
+<button>click me!</button>
+</body>
+</html>
+
+i want 
