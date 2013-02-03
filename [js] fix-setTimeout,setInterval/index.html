@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>fix problem with setInterval and so </title>
+	<script type="text/javascript" src='../src/jquery.js'></script>
+</head>
+<body>
+<div id='x' style='width:100px;height:100px'></div>
+	<script type="text/javascript">
+		var intervals = 1,
+			prev = new Date();
+
+		function timer() {
+			$('#x').css('background-color', intervals % 2 ? 'blue' : 'red');
+			intervals += 1;
+			//
+			// We want the next interval to be in 500ms, but if
+			// the previous one was too long we'll correct for it,
+			// or at least try to.
+			var now = new Date();
+			setTimeout(timer, Math.max(0, Math.min(500, 1000 - (now - prev))));
+			prev = now;
+		}
+		setTimeout(timer, 1000);
+	</script>
+</body>
+</html>
