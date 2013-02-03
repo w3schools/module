@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title> save Visited </title>
+	<script type="text/javascript">
+		var visitCount = localStorage["visitCount"];
+		visitCount = parseInt(visitCount);
+
+		if (!visitCount) {
+			visitCount = 0;
+		}
+
+		visitCount = visitCount + 1;
+
+		if (visitCount >= 5) {
+			alert("hello!");
+			visitCount = 0;
+		}
+
+		localStorage["visitCount"] = visitCount;
+	</script>
+</head>
+<body>
+	<p> Welcome </p>
+</body>
+</html>
